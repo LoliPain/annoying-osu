@@ -20,7 +20,7 @@ Still WIP, but already ready to use!
 
 ## DOWNLOAD LATEST BUILD .exe // СКАЧАТЬ ПОСЛЕДНЮЮ СБОРКУ .exe
 
-### https://P2LOVE.github.io/releases/annoying.exe
+### https://P2LOVE.github.io/annoying-osu/releases/annoying.exe
 * Сompiled by pyinstaller // Скомпилирована с помощью pyinstaller   
 
 #
