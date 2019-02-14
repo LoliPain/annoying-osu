@@ -30,7 +30,7 @@ Still WIP, but already ready to use!
 
 #
 
-### .exe уже собранные сборкк проверены на:
+### .exe уже собранные сборки проверены на:
     -Win 10 AMD
 
 #
