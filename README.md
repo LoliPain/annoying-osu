@@ -6,7 +6,7 @@ Using this program exempt creator from liability, check the LICENSE, sorry :(
 
 Still WIP, but already ready to use!
 
-** If you have some problems write me ### t.me/LoliPain ### vk.me/0id19 **
+** If you have some problems write me t.me/LoliPain vk.me/0id19 **
 
 # osu!Annoying
 
@@ -16,7 +16,7 @@ Still WIP, but already ready to use!
 
 Буду стараться не забивать на проект и обновлять его, но сейчас программа уже работоспособна
 
-** Если в ходе использования возникли любые проблемы не стесняйтесь писать мне ### t.me/LoliPain  ### vk.me/0id19 **
+** Если в ходе использования возникли любые проблемы не стесняйтесь писать мне t.me/LoliPain vk.me/0id19 **
 
 ## DOWNLOAD LATEST BUILD .exe // СКАЧАТЬ ПОСЛЕДНЮЮ СБОРКУ .exe
 
