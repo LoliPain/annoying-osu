@@ -5,21 +5,34 @@ print("Type en and press Enter // Введите ru и нажмите enter")
 language = input()
 
 while 1:
-    if language == 'en':
-        languagePack = open('localisation/en.txt')
-        print('Choosed english language!')
-        break
-    else: 
-        if language == 'ru':
-            languagePack = open('localisation/ru.txt')
-            print('Успешно выбран русский язык!')
+    if language == 'en': 
+        try:
+            languagePack = open('localisation/en.txt')
+        except FileNotFoundError:
+            print("Download from GitHub localisation folder and place it near this file")
             break
+        else:
+            print('Choosed english language!')
+            break
+    else:
+        if language == 'ru': 
+            try:
+                languagePack = open('localisation/ru.txt')
+            except FileNotFoundError:
+                print("Скачайте с ГитХаба папку localisation и поместите её рядом с этим файлом")
+                break
+            else:
+                print('Успешно выбран русский язык!')
+                break
         else:
             print("Type valid language! // Выберите язык только из предложенных вариантов!")
             language = input()
 
-
-languageStrings = languagePack.readlines()
+try:
+    languageStrings = languagePack.readlines()
+except NameError:
+    input()
+    languageStrings = languagePack.readlines()
 print(skip)
 print(languageStrings[0])
 print(languageStrings[1])
