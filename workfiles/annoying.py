@@ -1,4 +1,5 @@
-import socket
+import socket, requests
+a = 0
 skip = "-------------\n\n"
 print("Choose language // Выберите язык")
 print("Type en and press Enter // Введите ru и нажмите enter")
@@ -6,33 +7,22 @@ language = input()
 
 while 1:
     if language == 'en': 
-        try:
-            languagePack = open('localisation/en.txt')
-        except FileNotFoundError:
-            print("Download from GitHub localisation folder and place it near this file")
-            break
-        else:
-            print('Choosed english language!')
-            break
+        lang = 'en'
+        print('Choosed english language!')
+        break
     else:
         if language == 'ru': 
-            try:
-                languagePack = open('localisation/ru.txt')
-            except FileNotFoundError:
-                print("Скачайте с ГитХаба папку localisation и поместите её рядом с этим файлом")
-                break
-            else:
-                print('Успешно выбран русский язык!')
-                break
+            lang = 'ru'
+            print('Успешно выбран русский язык!')
+            break
         else:
             print("Type valid language! // Выберите язык только из предложенных вариантов!")
             language = input()
+localisation_url = "https://p2love.github.io/annoying-osu/localisation/" + lang + ".txt"
+languageRequest = requests.get(localisation_url)
+languageFile = languageRequest.text
+languageStrings = languageFile.split("\n")
 
-try:
-    languageStrings = languagePack.readlines()
-except NameError:
-    input()
-    languageStrings = languagePack.readlines()
 print(skip)
 print(languageStrings[0])
 print(languageStrings[1])
@@ -73,20 +63,26 @@ irc.send(('END \r\n').encode())
 print(languageStrings[10])
 while True:
     r = irc.recv(4096)
-    if r.decode().find('QUIT') and r != -1:
-        print(languageStrings[11])
-        irc.close()
-        break
-print(languageStrings[12])
-while True:
-    irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-    irc.connect((Server, Port))
-    irc.send(('PASS ' + Password + '\r\n').encode()) 
-    irc.send(('NICK ' + Login + '\r\n').encode()) 
-    irc.send(('END \r\n').encode())
-    r = irc.recv(4096)
-    if r.decode().find('QUIT') and r != -1:
-        irc.close()
+    if r.decode().find(Login) != -1 and r != -1:
+        if r.decode().find('Bad authentication token') != -1:
+            print(languageStrings[13])
+            break
+        else:
+            print(languageStrings[11])
+            irc.close()
+            a = 1
+            break
+if a == 1:
+    print(languageStrings[12])
+    while True:
+        irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
+        irc.connect((Server, Port))
+        irc.send(('PASS ' + Password + '\r\n').encode()) 
+        irc.send(('NICK ' + Login + '\r\n').encode()) 
+        irc.send(('END \r\n').encode())
+        r = irc.recv(4096)
+        if r.decode().find('QUIT') and r != -1:
+            irc.close()
 
 
 

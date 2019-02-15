@@ -4,7 +4,7 @@ base = None
 
 executables = [Executable("workfiles/annoying.py", base=base)]
 
-packages = ["idna", "socket"]
+packages = ["idna", "socket", "requests"]
 options = {
     'build_exe': {    
         'packages':packages,
@@ -14,7 +14,7 @@ options = {
 setup(
     name = "Annoying",
     options = options,
-    version = "1.0",
-    description = '',
+    version = "1.2",
+    description = 'Some annoying thing',
     executables = executables
 )

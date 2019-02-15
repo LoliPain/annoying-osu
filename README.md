@@ -1,6 +1,6 @@
 # osu!Annoying
 
-A useless thing that can take away your all friends :)
+A useless thing that may take away your all friends :)
 
 Using this program exempt creator from liability, check the LICENSE, sorry :(
 
@@ -8,9 +8,9 @@ Still WIP, but already ready to use!
 
 ** If you have some problems write me t.me/LoliPain vk.me/0id19 **
 
-# osu!Annoying
+#
 
-Бесполезная фигня которая поможет избавится от всех ваших друзей :)
+Бесполезная фигня использование которой может избавить вас от всех ваших друзей :)
 
 Использование программы осбождает автора от отвественности, смотрите LICENSE, сорян :(
 
@@ -21,17 +21,19 @@ Still WIP, but already ready to use!
 ## DOWNLOAD LATEST BUILD .exe // СКАЧАТЬ ПОСЛЕДНЮЮ СБОРКУ .exe
 
 ### https://P2LOVE.github.io/annoying-osu/releases/annoying.exe
-* Сompiled by pyinstaller // Скомпилирована с помощью pyinstaller   
+* VT: https://www.virustotal.com/ru/file/d8fcc63a6ea99ee3274f5d4a1cf7088358c9f2a74407738e0b6d818d9258bd43/analysis/
+* False positive. You can build your own pyinstaller .exe with source code and check Hashes to verify this fact // Ложное срабатывание. Вы можете собрать свой .exe с помощью pyinstaller и сравить контрольки чтобы убедится в этом.
+
 
 #
 
 ### .exe builds tested on OS:
-    - Win 10 AMD
+    - Win 10 Pro 64x AMD
 
 #
 
 ### .exe уже собранные сборки проверены на:
-    -Win 10 AMD
+    -Win 10 Pro 64x AMD
 
 #
 
