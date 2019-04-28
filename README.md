@@ -1,6 +1,6 @@
 # osu!Annoying
 
-A useless thing that may take away your all friends :)
+A useless thing that may take away all your friends :)
 
 Using this program exempt creator from liability, check the LICENSE, sorry :(
 
